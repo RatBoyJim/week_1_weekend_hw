@@ -1,13 +1,18 @@
 # WRITE YOUR FUNCTIONS HERE
-def get_pet_shop_name(dict):
-    return dict["name"]
-
-def get_total_cash(dict):
-    return dict["admin"]["total_cash"]
-
-def add_or_remove_cash(dict, amount):
-    dict["admin"]["total_cash"] += amount
+def get_pet_shop_name(pet_shop):
+    return pet_shop["name"]
     
-def get_pets_sold(dict):
-    return dict["admin"]["pets_sold"]
+def get_total_cash(pet_shop):
+    return pet_shop["admin"]["total_cash"]
+
+def add_or_remove_cash(pet_shop, amount):
+    pet_shop["admin"]["total_cash"] += amount
+    
+def get_pets_sold(pet_shop):
+    return pet_shop["admin"]["pets_sold"]
+
+def increase_pets_sold(pet_shop, num_pets):
+    pet_shop["admin"]["pets_sold"] += num_pets
+    
+
  
