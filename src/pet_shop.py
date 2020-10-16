@@ -8,5 +8,6 @@ def get_total_cash(dict):
 def add_or_remove_cash(dict, amount):
     dict["admin"]["total_cash"] += amount
     
-
+def get_pets_sold(dict):
+    return dict["admin"]["pets_sold"]
  
