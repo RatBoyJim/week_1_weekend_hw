@@ -1,4 +1,5 @@
 # WRITE YOUR FUNCTIONS HERE
+
 def get_pet_shop_name(pet_shop):
     return pet_shop["name"]
     
@@ -59,11 +60,21 @@ def customer_can_afford_pet(customer, pet):
         return False
 
 def sell_pet_to_customer(pet_shop, pet, customer):
-    if customer_can_afford_pet(customer, pet) == True:
+    if pet != None and customer_can_afford_pet(customer, pet) == True:
+        num_pets = 1
         add_pet_to_customer(customer, pet)
-        increase_pets_sold(pet_shop, 1)
+        increase_pets_sold(pet_shop, num_pets)
         remove_customer_cash(customer, pet["price"])
         add_or_remove_cash(pet_shop, pet["price"])
+        remove_pet_by_name(pet_shop, pet["name"])
+    
+    
+
+    
+
+    
+
+
 
 
 
