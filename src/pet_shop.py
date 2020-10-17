@@ -44,4 +44,5 @@ def get_customer_cash(customers):
     for customer in customers:
         return customers["cash"]
 
-
+def remove_customer_cash(customer, amount):
+    customer["cash"] -= amount
